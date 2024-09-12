@@ -4,7 +4,7 @@ namespace SOLID\CompositionInheritance;
 
 class Chicken implements ITopping
 {
-    public $title ;
+    public $title;
     public $price;
 
     public function __construct()

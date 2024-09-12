@@ -16,6 +16,7 @@ class NotificationServices
 
 
     }
+
     public function notify()
     {
         $this->iNotificationServices->send();

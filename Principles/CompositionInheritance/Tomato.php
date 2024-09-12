@@ -5,7 +5,7 @@ namespace SOLID\CompositionInheritance;
 class Tomato implements ITopping
 {
 
-    public $title ;
+    public $title;
     public $price;
 
     public function __construct()

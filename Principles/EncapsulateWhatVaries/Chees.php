@@ -6,10 +6,10 @@ class Chees extends Pizza
 {
 
 
-    public  function __construct()
+    public function __construct()
     {
-        $this->Title=$this->getClassName();
-        $this->Price=$this->Price + 3;
+        $this->Title = $this->getClassName();
+        $this->Price = $this->Price + 3;
     }
 
 }

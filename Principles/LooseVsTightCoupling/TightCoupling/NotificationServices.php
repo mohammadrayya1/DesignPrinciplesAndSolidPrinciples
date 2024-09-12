@@ -6,14 +6,15 @@ class NotificationServices
 {
 
     private readonly SmsService $smsService;
-    private  readonly EmailService $emailService;
+    private readonly EmailService $emailService;
 
-    public function __construct(SmsService $smsService,EmailService $emailService)
+    public function __construct(SmsService $smsService, EmailService $emailService)
     {
         $this->emailService = $emailService;
-        $this->smsService= $smsService;
+        $this->smsService = $smsService;
 
     }
+
     public function notify()
     {
         $this->smsService->send();

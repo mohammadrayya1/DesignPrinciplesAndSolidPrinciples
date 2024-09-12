@@ -50,8 +50,26 @@ require_once __DIR__ . '/vendor/autoload.php';
 //$account1 = new \SOLID\SOLID\SRP\Before\Account("mohammad","mohammad@gmail.com",4500);
 //$account1->MakeTransaction(500);
 
-$account1 = new \SOLID\SOLID\SRP\After\Account("mohammad","mohammad@gmail.com",4500);
-$accountService= new \SOLID\SOLID\SRP\After\AccountService();
+//$account1 = new \SOLID\SOLID\SRP\After\Account("mohammad","mohammad@gmail.com",4500);
+//$accountService= new \SOLID\SOLID\SRP\After\AccountService();
+//
+//
+//$accountService->WithDraw($account1,460);
 
 
-$accountService->WithDraw($account1,460);
+
+$bus1=new \SOLID\SOLIDMOHAMMADYAHIAH\SRP\Bus(45);
+$bus1->setColor("red");
+$bus1->setDoors(3);
+$bus1->setMaxSpeed(180);
+
+
+$drive = new \SOLID\SOLIDMOHAMMADYAHIAH\SRP\Driver("mohammad",35,54658);
+
+$routeM4=new \SOLID\SOLIDMOHAMMADYAHIAH\SRP\Route("Alnabek","Homes",80);
+$routeM5=new \SOLID\SOLIDMOHAMMADYAHIAH\SRP\Route("Homes","Alleppo",200);
+$bus1->setDriver($drive);
+$bus1->addRouts($routeM4);
+$bus1->addRouts($routeM5);
+
+$bus1->move();

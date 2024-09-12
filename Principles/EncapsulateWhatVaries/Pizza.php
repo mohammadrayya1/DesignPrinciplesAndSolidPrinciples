@@ -2,43 +2,43 @@
 
 namespace SOLID\EncapsulateWhatVaries;
 ob_start();
+
 class Pizza
 {
 
     public $Title;
-    public $Price=10;
+    public $Price = 10;
 
 
     public static function create($entity)
     {
-        if (is_subclass_of($entity, Pizza::class))
-        {
-            $element=new $entity();
+        if (is_subclass_of($entity, Pizza::class)) {
+            $element = new $entity();
             return $element;
 
-        }else return false;
+        } else return false;
 
     }
+
     public static function order($entity)
     {
 
-        if ($element=self::create($entity)){
+        if ($element = self::create($entity)) {
             self::prepare();
             self::cook();
             self::cut();
 
             return $element;
-        } else
-        {
+        } else {
             return "Error: The entity must be a subclass of Pizza.";
         }
 
 
     }
 
-    public  static function prepare ()
+    public static function prepare()
     {
-        echo  "preparing..  ";
+        echo "preparing..  ";
         flush(); // إرسال البيانات إلى المتصفح
         ob_flush(); // إرسال البيانات المؤقتة
         sleep(1);
@@ -47,7 +47,7 @@ class Pizza
         ob_flush();
     }
 
-    public  static function cook ()
+    public static function cook()
     {
         echo " cooking..  ";
         flush(); // إرسال البيانات إلى المتصفح
@@ -57,7 +57,8 @@ class Pizza
         flush();
         ob_flush();
     }
-    public  static function cut ()
+
+    public static function cut()
     {
         echo " cutting and boxing..  ";
         flush(); // إرسال البيانات إلى المتصفح
@@ -70,8 +71,8 @@ class Pizza
 
     public function __toString()
     {
-        return "  Title is ". $this->getClassName() ." and Pricing is $this->Price";
-            
+        return "  Title is " . $this->getClassName() . " and Pricing is $this->Price";
+
     }
 
     public function getClassName()

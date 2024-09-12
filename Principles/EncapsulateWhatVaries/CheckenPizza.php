@@ -7,8 +7,8 @@ class CheckenPizza extends Pizza
 
     public function __construct()
     {
-        $this->Title= $this->getClassName();
-        $this->Price=$this->Price + 5;
+        $this->Title = $this->getClassName();
+        $this->Price = $this->Price + 5;
 
     }
 

@@ -6,6 +6,7 @@ interface ITopping
 {
 
     public function getTitle(): string;
+
     public function getPrice(): float;
 
 
