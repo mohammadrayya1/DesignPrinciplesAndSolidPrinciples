@@ -39,8 +39,8 @@ class Pizza
     public static function prepare()
     {
         echo "preparing..  ";
-        flush(); // إرسال البيانات إلى المتصفح
-        ob_flush(); // إرسال البيانات المؤقتة
+        flush();
+        ob_flush();
         sleep(1);
         echo " completed";
         flush();
@@ -50,8 +50,8 @@ class Pizza
     public static function cook()
     {
         echo " cooking..  ";
-        flush(); // إرسال البيانات إلى المتصفح
-        ob_flush(); // إرسال البيانات المؤقتة
+        flush();
+        ob_flush();
         sleep(1);
         echo " completed";
         flush();
@@ -61,8 +61,8 @@ class Pizza
     public static function cut()
     {
         echo " cutting and boxing..  ";
-        flush(); // إرسال البيانات إلى المتصفح
-        ob_flush(); // إرسال البيانات المؤقتة
+        flush();
+        ob_flush();
         sleep(1);
         echo " completed";
         flush();

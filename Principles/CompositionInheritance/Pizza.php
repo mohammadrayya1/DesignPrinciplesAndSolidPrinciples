@@ -34,7 +34,6 @@ class Pizza
         $lineBreak = (php_sapi_name() == "cli") ? "\n" : "<br>";
         $result = basename(str_replace('\\', '/', static::class)) . " BasePrice is $this->price \n The Toppings are: $lineBreak";
 
-
         foreach ($this->toppings as $item) {
             $result .= $item->getTitle() . " Price is " . $item->getPrice() . "$lineBreak";
         }
