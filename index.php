@@ -1,15 +1,5 @@
 <?php
 
-use SOLID\CompositionInheritance\BlackOlive;
-use SOLID\CompositionInheritance\Chicken;
-use SOLID\CompositionInheritance\GreenPaper;
-use SOLID\CompositionInheritance\Pizza;
-use SOLID\CompositionInheritance\Tomato;
-use SOLID\LooseVsTightCoupling\TightCoupling\NotificationServices;
-use SOLID\LooseVsTightCoupling\LooseCoupling\NotificationServices as LooseNotificationServices;
-use SOLID\SOLID\OpenClosedPrinciple\Before\QuestionBank;
-use SOLID\SOLIDMOHAMMADYAHIAH\OCP\Trip;
-
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -97,34 +87,85 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 
 //$quis->print();
-
-$route90=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Route("Homs","Alnabek",80);
-$route80=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Route("Alnabek","damascus",90);
-$driver =new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Driver("mohammad",35,46586);
-
-
-$bus=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Bus(45);
-$car=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Car();
-$ship=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Ship();
-$ship->addRouts($route80);
-$ship->addRouts($route90);
-$ship->setDriver($driver);
-
-$car->addRouts($route80);
-$car->addRouts($route90);
-$car->setDriver($driver);
-$car->setMaxSpeed(180);
-$move=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\MoveonTheRoade();
-$moveOnTheWaves=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\MoveOnTheWaves();
-$ship->setMove($moveOnTheWaves);
-$car->setMove($move);
-$trip =new Trip(15,50,560,$car);
-
-
-echo $trip->move();
-
-
+//
+//$route90=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Route("Homs","Alnabek",80);
+//$route80=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Route("Alnabek","damascus",90);
+//$driver =new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Driver("mohammad",35,46586);
+//
+//
+//$bus=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Bus(45);
+//$car=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Car();
+//$ship=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\Ship();
+//$ship->addRouts($route80);
+//$ship->addRouts($route90);
+//$ship->setDriver($driver);
+//
+//$car->addRouts($route80);
+//$car->addRouts($route90);
+//$car->setDriver($driver);
+//$car->setMaxSpeed(180);
+//$move=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\MoveonTheRoade();
+//$moveOnTheWaves=new \SOLID\SOLIDMOHAMMADYAHIAH\OCP\MoveOnTheWaves();
+//$ship->setMove($moveOnTheWaves);
+//$car->setMove($move);
+//$trip =new Trip(15,50,560,$car);
+//
+//
+//echo $trip->move();
 
 
+//
+//$bonus=new \SOLID\SOLIDMOHAMMADYAHIAH\OCPMo\CalcolateManager();
+//$marketManager=new \SOLID\SOLIDMOHAMMADYAHIAH\OCPMo\MarketingEmployee("mohammad",35,4500,$bonus);
+//
+//
+//echo $marketManager->calculate();
 
+
+
+
+
+//$forwardplay=new \SOLID\SOLIDMOHAMMADYAHIAH\OCPMo\ForwardPlay();
+//$goalkeeperplay=new \SOLID\SOLIDMOHAMMADYAHIAH\OCPMo\GoalkeeperPlay();
+//$defenderplay=new \SOLID\SOLIDMOHAMMADYAHIAH\OCPMo\DefenderPlay();
+//
+//
+//
+//$forward=new \SOLID\SOLIDMOHAMMADYAHIAH\OCPMo\Player("mohammad",35,$forwardplay);
+//$goalkeeper=new \SOLID\SOLIDMOHAMMADYAHIAH\OCPMo\Player("Thomas",40,$goalkeeperplay);
+//$defender=new \SOLID\SOLIDMOHAMMADYAHIAH\OCPMo\Player("Andres",50,$defenderplay);
+//
+//$match= new \SOLID\SOLIDMOHAMMADYAHIAH\OCPMo\Matche();
+//$match->setPlayers($forward);
+//$match->setPlayers($goalkeeper);
+//$match->setPlayers($defender);
+//
+//$match->start();
+
+
+
+
+
+//$ac =new CheckingAccount("Mohammad",5000);
+//
+//echo $ac->balance."<br>";
+//$ac->deposite(2000);
+//echo $ac->balance;
+//$ac->withdraw(3000);
+//echo $ac->balance;
+//
+//$d=new FixedDepositAccount();
+
+
+// $shape= new \SOLID\SOLIDMOHAMMADYAHIAH\LSP\Rectangle();
+
+
+
+$employies = \SOLID\SOLID\ISP\Repositiry::LoadEmployees();
+
+
+    foreach ($employies as $employee){
+            echo $employee->PrintSalarySlip()."<br>";
+            echo "<br>";
+    }
 ?>
