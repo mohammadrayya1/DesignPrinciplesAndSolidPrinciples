@@ -160,12 +160,21 @@ require_once __DIR__ . '/vendor/autoload.php';
 // $shape= new \SOLID\SOLIDMOHAMMADYAHIAH\LSP\Rectangle();
 
 
+//
+//$employies = \SOLID\SOLID\ISP\Repositiry::LoadEmployees();
+//
+//
+//    foreach ($employies as $employee){
+//            echo $employee->PrintSalarySlip()."<br>";
+//            echo "<br>";
+//    }
 
-$employies = \SOLID\SOLID\ISP\Repositiry::LoadEmployees();
+$c1=new \SOLID\SOLID\DIP\After\Customer();
+
+$c1->mobileNumber="54446868";
+$smsService=new \SOLID\SOLID\DIP\After\SmsService($c1->mobileNumber);
+$serviceNoti=new \SOLID\SOLID\DIP\After\Notifications($smsService);
 
 
-    foreach ($employies as $employee){
-            echo $employee->PrintSalarySlip()."<br>";
-            echo "<br>";
-    }
+$serviceNoti->Notify();
 ?>
